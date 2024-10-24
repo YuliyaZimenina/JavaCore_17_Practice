@@ -8,6 +8,11 @@ public class GameGuess {
         System.out.println("Try to guess the letter ");
         letter = (char) System.in.read(); // Reading a character from the keyboard
         if (letter == answer) System.out.println("*** RIGHT ***");
-        else System.out.println("*** WRONG ***");
+        else{
+            System.out.println("*** WRONG ***");
+            if (letter < answer) System.out.println("The hidden letter is located further down" +
+                    " the alphabet");
+            else System.out.println("The hidden letter is located closer in the alphabet");
+        }
     }
 }
